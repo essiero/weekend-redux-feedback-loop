@@ -1,11 +1,17 @@
 import React from 'react';
-import axios from 'axios';
-import './App.css';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+import axios from "axios";
+
 import Feelings from '../Feelings/Feelings';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import ReviewFeedback from '../Review/Review';
+import Success from '../Success/Success';
 
+import './App.css';
 
 function App() {
 
@@ -20,6 +26,8 @@ function App() {
       <Understanding />
       <Support />
       <Comments />
+      <ReviewFeedback />
+      <Success />
     </div>
   );
 }
