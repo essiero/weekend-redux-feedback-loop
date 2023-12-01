@@ -1,6 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import Feelings from '../Feelings/Feelings';
+import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
+
 
 function App() {
 
@@ -9,7 +14,12 @@ function App() {
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
+
       </header>
+      <Feelings />
+      <Understanding />
+      <Support />
+      <Comments />
     </div>
   );
 }
