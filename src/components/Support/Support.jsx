@@ -2,13 +2,6 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
-/*     Support
-    [X] import useDispatch, useSelector from react-redux
-    [X] import HashRouter as Router, Route, Link from react-router-dom
-    [ ] create variable to capture input value
-    [ ] dispatch feedback.support to store
-    [X] wrap "next" button in Router-Route-Link to '/review' page */
-
 function Support() {
   let [support, setSupport] = useState('')
 
