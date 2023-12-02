@@ -45,9 +45,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     Review Feedback
     [X] import useDispatch, useSelector from react-redux
     [X] import HashRouter as Router, Route, Link from react-router-dom
-    [ ] get feedback object from Redux store with useSelector
-    [ ] map feedback object to display feedback values and comments
-    [ ] POST route to post feedback object to database table
+    [X] get feedback object from Redux store with useSelector
+    [X] map feedback object to display feedback values and comments
+    [X] POST route to post feedback object to database table
     [X] wrap "submit" button in Router-Route-Link to '/success' page 
         [ ] upon successful feedback submission?
 

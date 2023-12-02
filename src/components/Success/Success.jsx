@@ -3,12 +3,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
 function Success() {
+    const dispatch = useDispatch();
+    const resetFeedback = () => {
+        dispatch({
+        type: "RESET_FEEDBACK"
+    })
+    }
   return (
     <>
       <div>Thank You!</div>
       <Router>
         <Link to="/">
-      <button>Leave New Feedback</button>
+      <button
+      onClick={resetFeedback}>Leave New Feedback</button>
       </Link>
       </Router>
     </>

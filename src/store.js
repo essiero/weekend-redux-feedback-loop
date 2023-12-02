@@ -25,9 +25,20 @@ const comments = (state = '', action) => {
     } return state
 }
 
-const feedback = (state={}, action) => {
+const feedback = (state={
+    feeling: {feeling},
+    understanding: {understanding},
+    support: {support},
+    comments: {comments}
+}, action) => {
     if (action.type === "ADD_FEEDBACK"){
         return (action.payload)
+    } return state
+}
+
+const resetFeedback = (state=feedback, action) => {
+    if (action.type === "RESET_FEEDBACK"){
+        return ({})
     } return state
 }
 
@@ -37,7 +48,8 @@ const store = createStore(
         understanding,
         support,
         comments, 
-        feedback
+        feedback,
+        resetFeedback
     }),
     applyMiddleware(logger),
 );
