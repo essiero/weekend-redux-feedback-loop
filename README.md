@@ -8,9 +8,52 @@ Your project description goes here. What problem did you solve? How did you solv
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
-# TO-DO's
+## Notes
 - Feelings component => next button will use a react router to bring you to the next page/component and save your score as redux state
 
 - Leave new feedback will bring you back to start page as well as clear all input fields.
 - To reset input fields: return '', NOT state = ''
 - We need to "npm install react-redux" - it's not in our package.json dependencies
+
+## To-do's
+
+[X] create all components
+[ ] create reducer for feedback redux state: object with property for each feedback category
+[ ] wrap <Feelings /> component in Route with exact path = "/"
+
+    Feelings
+    [ ] import useDispatch, useSelector from react-redux
+    [ ] import HashRouter as Router, Route, Link from react-router-dom
+    [ ] create variable to capture input value
+    [ ] dispatch feedback.feeling to store
+    [ ] wrap "next" button in Router-Route-Link to '/understanding' page
+
+    Understanding
+    [ ] import useDispatch, useSelector from react-redux
+    [ ] import HashRouter as Router, Route, Link from react-router-dom
+    [ ] create variable to capture input value
+    [ ] dispatch feedback.understanding to store
+    [ ] wrap "next" button in Router-Route-Link to '/support' page
+
+    Support
+    [ ] import useDispatch, useSelector from react-redux
+    [ ] import HashRouter as Router, Route, Link from react-router-dom
+    [ ] create variable to capture input value
+    [ ] dispatch feedback.support to store
+    [ ] wrap "next" button in Router-Route-Link to '/review' page
+
+    Review Feedback
+    [ ] import useDispatch, useSelector from react-redux
+    [ ] import HashRouter as Router, Route, Link from react-router-dom
+    [ ] get feedback object from Redux store with useSelector
+    [ ] map feedback object to display feedback values and comments
+    [ ] POST route to post feedback object to database table
+    [ ] wrap "submit" button in Router-Route-Link to '/success' page upon
+           successful feedback submission
+
+    Success
+    [ ] onClick function for Leave New Feedback button to:
+        [ ] clear Redux fields 
+            [ ] dispatch "CLEAR_INPUT" to store
+            [ ] function in store to return feedback object state as empty object
+        [ ] navigate to '/' home page (feelings) (need to wrap with Link)

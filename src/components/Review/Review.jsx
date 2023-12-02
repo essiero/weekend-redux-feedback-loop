@@ -11,9 +11,13 @@ function ReviewFeedback(){
     <h3>Understanding:</h3>
     <h3>Support:</h3>
     <h3>Comments:</h3>
+    <Router>
+            <Link to="/submitted">
     <button
         data-testid="next"
         >SUBMIT</button>
+</Link>
+</Router>
     </>
 )}
 
