@@ -12,7 +12,7 @@ function Feelings() {
         console.log('feeling now: ', feeling)
     }
 
-    const toUnderstanding = () => {
+    const saveFeeling = () => {
         dispatch({
             type: "ADD_FEELING",
             payload: feeling
@@ -26,6 +26,7 @@ function Feelings() {
         name="rating" 
         id="feeling"
         onChange={() => handleInputChange(event)}>
+        <option value=""> </option>
         <option value="5">5</option>
         <option value="4">4</option>
         <option value="3">3</option>
@@ -36,7 +37,7 @@ function Feelings() {
             <Link to="/understanding">
     <button 
         data-testid="next"
-        onClick={toUnderstanding}>NEXT</button>
+        onClick={saveFeeling}>NEXT</button>
         </Link>
         </Router>
     </>)
