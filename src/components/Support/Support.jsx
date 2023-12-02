@@ -2,12 +2,36 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
+/*     Support
+    [X] import useDispatch, useSelector from react-redux
+    [X] import HashRouter as Router, Route, Link from react-router-dom
+    [ ] create variable to capture input value
+    [ ] dispatch feedback.support to store
+    [X] wrap "next" button in Router-Route-Link to '/review' page */
+
 function Support() {
+  let [support, setSupport] = useState('')
+
+  const dispatch = useDispatch();
+
+  const handleInputChange = (event) => {
+    setSupport(event.target.value)
+      console.log('support now: ', support)
+  }
+
+  const saveSupport = () => {
+      dispatch({
+          type: "ADD_SUPPORT",
+          payload: support
+      })
+  }
   return (
     <>
       <h3>How well are you being supported?</h3>
       <label htmlFor="support">Support?</label>
-      <select name="rating" id="support">
+      <select name="rating" id="support" 
+        onChange={() => handleInputChange(event)}>
+        <option value=""> </option>
         <option value="5">5</option>
         <option value="4">4</option>
         <option value="3">3</option>
@@ -18,7 +42,7 @@ function Support() {
             <Link to="/comments">
       <button 
         data-testid="next"
-        >NEXT</button>
+        onClick={saveSupport} >NEXT</button>
         </Link>
 </Router>
     </>

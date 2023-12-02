@@ -31,15 +31,15 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     Understanding
     [X] import useDispatch, useSelector from react-redux
     [X] import HashRouter as Router, Route, Link from react-router-dom
-    [ ] create variable to capture input value
-    [ ] dispatch feedback.understanding to store
+    [X] create variable to capture input value
+    [X] dispatch feedback.understanding to store
     [X] wrap "next" button in Router-Route-Link to '/support' page
 
     Support
     [X] import useDispatch, useSelector from react-redux
     [X] import HashRouter as Router, Route, Link from react-router-dom
-    [ ] create variable to capture input value
-    [ ] dispatch feedback.support to store
+    [X] create variable to capture input value
+    [X] dispatch feedback.support to store
     [X] wrap "next" button in Router-Route-Link to '/review' page
 
     Review Feedback
