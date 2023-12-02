@@ -2,12 +2,40 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
+
+/* Understanding
+[X] import useDispatch, useSelector from react-redux
+[X] import HashRouter as Router, Route, Link from react-router-dom
+[ ] create variable to capture input value
+[ ] dispatch feedback.understanding to store
+[X] wrap "next" button in Router-Route-Link to '/support' page */
+
 function Understanding() {
+  let [understanding, setUnderstanding] = useState('')
+
+  const dispatch = useDispatch();
+
+  const handleInputChange = (event) => {
+      setUnderstanding(event.target.value)
+      console.log('understanding now: ', understanding)
+  }
+
+  const saveUnderstanding = () => {
+      dispatch({
+          type: "ADD_UNDERSTANDING",
+          payload: understanding
+      })
+  }
+
+
   return (
     <>
       <h3>How well are you understanding the content?</h3>
       <label htmlFor="understanding">Understanding?</label>
-      <select name="rating" id="understanding">
+      <select 
+        name="rating" 
+        id="understanding" 
+        onChange={() => handleInputChange(event)}>
         <option value=""> </option>
         <option value="5">5</option>
         <option value="4">4</option>
@@ -19,7 +47,7 @@ function Understanding() {
             <Link to="/support">
       <button 
         data-testid="next"
-        >NEXT</button>
+        onClick={saveUnderstanding} >NEXT</button>
                 </Link>
         </Router>
     </>
