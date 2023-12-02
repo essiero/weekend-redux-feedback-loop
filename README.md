@@ -18,42 +18,42 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 ## To-do's
 
 [X] create all components
-[ ] create reducer for feedback redux state: object with property for each feedback category
-[ ] wrap <Feelings /> component in Route with exact path = "/"
+[/] create reducer for feedback redux state: object with property for each feedback category
+[X] wrap <Feelings /> component in Route with exact path = "/"
 
     Feelings
-    [ ] import useDispatch, useSelector from react-redux
-    [ ] import HashRouter as Router, Route, Link from react-router-dom
-    [ ] create variable to capture input value
-    [ ] dispatch feedback.feeling to store
-    [ ] wrap "next" button in Router-Route-Link to '/understanding' page
+    [X] import useDispatch, useSelector from react-redux
+    [X] import HashRouter as Router, Route, Link from react-router-dom
+    [X] create variable to capture input value
+    [X] dispatch feedback.feeling to store
+    [X] wrap "next" button in Router-Route-Link to '/understanding' page
 
     Understanding
-    [ ] import useDispatch, useSelector from react-redux
-    [ ] import HashRouter as Router, Route, Link from react-router-dom
+    [X] import useDispatch, useSelector from react-redux
+    [X] import HashRouter as Router, Route, Link from react-router-dom
     [ ] create variable to capture input value
     [ ] dispatch feedback.understanding to store
-    [ ] wrap "next" button in Router-Route-Link to '/support' page
+    [X] wrap "next" button in Router-Route-Link to '/support' page
 
     Support
-    [ ] import useDispatch, useSelector from react-redux
-    [ ] import HashRouter as Router, Route, Link from react-router-dom
+    [X] import useDispatch, useSelector from react-redux
+    [X] import HashRouter as Router, Route, Link from react-router-dom
     [ ] create variable to capture input value
     [ ] dispatch feedback.support to store
-    [ ] wrap "next" button in Router-Route-Link to '/review' page
+    [X] wrap "next" button in Router-Route-Link to '/review' page
 
     Review Feedback
-    [ ] import useDispatch, useSelector from react-redux
-    [ ] import HashRouter as Router, Route, Link from react-router-dom
+    [X] import useDispatch, useSelector from react-redux
+    [X] import HashRouter as Router, Route, Link from react-router-dom
     [ ] get feedback object from Redux store with useSelector
     [ ] map feedback object to display feedback values and comments
     [ ] POST route to post feedback object to database table
-    [ ] wrap "submit" button in Router-Route-Link to '/success' page upon
-           successful feedback submission
+    [X] wrap "submit" button in Router-Route-Link to '/success' page 
+        [ ] upon successful feedback submission?
 
     Success
     [ ] onClick function for Leave New Feedback button to:
         [ ] clear Redux fields 
             [ ] dispatch "CLEAR_INPUT" to store
             [ ] function in store to return feedback object state as empty object
-        [ ] navigate to '/' home page (feelings) (need to wrap with Link)
+        [X] navigate to '/' home page (feelings) (need to wrap with Link)
