@@ -25,7 +25,8 @@ function Comments() {
     <label htmlFor="comments">Comments</label>
     <input 
     id="comments"
-        onChange={() => handleInputChange(event)}></input>
+        onChange={() => handleInputChange(event)}
+        data-testid="input"></input>
     <Router>
             <Link to="/review">
     <button 

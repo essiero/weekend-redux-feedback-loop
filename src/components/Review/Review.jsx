@@ -5,31 +5,22 @@ import axios from "axios";
 
 function ReviewFeedback(){
     const dispatch = useDispatch();
-    // const feedback = useSelector(store => store.feedback)
-
-
-    // let feedbackToSubmit = feedback.map((feedback) => (
-    //     {
-    //     feeling: feedback.feeling,
-    //     understanding: feedback.feeling,
-    //     support: feedback.support,
-    //     comments: feedback.comments}
-    // ))
+    const feedback = useSelector((store) => store.feedback)
     
     
-    // const sendFeedback = () => {
-    //     axios({
-    //         method: 'POST',
-    //         url: '/feedback',
-    //         data: feedbackToSubmit
-    //     })
-    //     .then((response) => {
-    //         alert('Submission succesful!')
-    //     })
-    //     .catch((error) => {
-    //         console.error(error)
-    //     })
-    // }
+    const sendFeedback = () => {
+        axios({
+            method: 'POST',
+            url: '/feedback',
+            data: feedback
+        })
+        .then((response) => {
+            alert('Submission succesful!')
+        })
+        .catch((error) => {
+            console.error(error)
+        })
+    }
     return (
     <>
     <h2>Review Your Feedback</h2>
@@ -41,7 +32,7 @@ function ReviewFeedback(){
             <Link to="/submitted">
     <button
         data-testid="next"
-        // onClick={sendFeedback}
+        onClick={sendFeedback}
         >SUBMIT</button>
 </Link>
 </Router>
