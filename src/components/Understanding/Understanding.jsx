@@ -24,7 +24,7 @@ function Understanding() {
     <>
       <h3>How well are you understanding the content?</h3>
       <label htmlFor="understanding">Understanding?</label>
-      <select 
+      {/* <select 
         name="rating" 
         id="understanding" 
         onChange={() => handleInputChange(event)}
@@ -35,7 +35,13 @@ function Understanding() {
         <option value="3">3</option>
         <option value="2">2</option>
         <option value="1">1</option>
-      </select>
+      </select> */}
+              <input 
+        name="rating" 
+        id="understanding"
+        onChange={() => handleInputChange(event)}
+        data-testid="input">
+        </input>
       <Router>
             <Link to="/support">
       <button 

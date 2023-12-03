@@ -1,6 +1,5 @@
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
 
 function Success() {
     const dispatch = useDispatch();
@@ -15,7 +14,8 @@ function Success() {
       <Router>
         <Link to="/">
       <button
-      onClick={resetFeedback}>Leave New Feedback</button>
+      onClick={resetFeedback}
+      data-testid="next">Leave New Feedback</button>
       </Link>
       </Router>
     </>

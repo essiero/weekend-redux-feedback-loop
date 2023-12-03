@@ -22,7 +22,7 @@ function Feelings() {
     <>
     <h3>How are you feeling today?</h3>
     <label htmlFor="feeling">Feeling?</label>
-    <select 
+    {/* <select 
         name="rating" 
         id="feeling"
         onChange={() => handleInputChange(event)}
@@ -33,7 +33,13 @@ function Feelings() {
         <option value="3">3</option>
         <option value="2">2</option>
         <option value="1">1</option>
-        </select>
+        </select> */}
+        <input 
+        name="rating" 
+        id="feeling"
+        onChange={() => handleInputChange(event)}
+        data-testid="input">
+        </input>
         <Router>
             <Link to="/understanding">
     <button 
