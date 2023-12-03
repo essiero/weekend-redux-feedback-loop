@@ -57,3 +57,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
             [ ] dispatch "CLEAR_INPUT" to store
             [ ] function in store to return feedback object state as empty object
         [X] navigate to '/' home page (feelings) (need to wrap with Link)
+
+    LEFT:
+        I need to figure out how to render feedback components on the Review page; and how to make one object out of the different components to post to the database.
+
+        Also need to check that my resetFeedback function and Success component actually work
