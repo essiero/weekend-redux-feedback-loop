@@ -22,7 +22,7 @@ function Support() {
     <>
       <h3>How well are you being supported?</h3>
       <label htmlFor="support">Support?</label>
-      {/* <select name="rating" id="support" 
+      <select name="rating" id="support" 
         onChange={() => handleInputChange(event)}
         data-testid="input">
         <option value=""> </option>
@@ -31,13 +31,13 @@ function Support() {
         <option value="3">3</option>
         <option value="2">2</option>
         <option value="1">1</option>
-      </select> */}
-              <input 
+      </select>
+              {/* <input 
         name="rating" 
         id="support"
         onChange={() => handleInputChange(event)}
         data-testid="input">
-        </input>
+        </input> */}
       <Router>
             <Link to="/comments">
       <button 

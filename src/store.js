@@ -49,7 +49,13 @@ const feedback = (state={}, action) => {
 }
 
 // const resetFeedback = (state=feedback, action) => {
-//     if (
+//     if (action.type === "RESET_FEEDBACK"){
+        // return ({...state,
+        //     feeling: '',
+        //     understanding: '',
+        //     support: '',
+        //     comments: ''
+        // })
 //     } return state
 // }
 
