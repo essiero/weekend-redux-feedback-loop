@@ -4,61 +4,33 @@
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+_Duration: 48-hour sprint_
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+On this weekend sprint project, we were tasked with created a feedback app that gathers input from users using Reeact and Redux and stores it in a database.
 
-## Notes
-- Feelings component => next button will use a react router to bring you to the next page/component and save your score as redux state
+## Prerequisites
+- [Node.js] (https://nodejs.org/en/)
+- React.js
+- Axios
+- Redux
+- Express
+- BodyParser
+- PG
+- PostgreSQL
 
-- Leave new feedback will bring you back to start page as well as clear all input fields.
-- To reset input fields: return '', NOT state = ''
-- We need to "npm install react-redux" - it's not in our package.json dependencies
+## Installation
+1. Create a database named `prime_feedback` using your database manager.
+2. Use the queries from the data.sql file to create your tables and seed it with a row of example data.
+3. Open up your editor of choice and run an `npm install`
+4. Run `npm install react-redux` in your terminal
+5. Run `npm run server` in your terminal
+6. Run `npm run client` in your terminal
+7. The `npm run client` command will open up a new browser tab for you!
 
-## To-do's
-
-[X] create all components
-[/] create reducer for feedback redux state: object with property for each feedback category
-[X] wrap <Feelings /> component in Route with exact path = "/"
-
-    Feelings
-    [X] import useDispatch, useSelector from react-redux
-    [X] import HashRouter as Router, Route, Link from react-router-dom
-    [X] create variable to capture input value
-    [X] dispatch feedback.feeling to store
-    [X] wrap "next" button in Router-Route-Link to '/understanding' page
-
-    Understanding
-    [X] import useDispatch, useSelector from react-redux
-    [X] import HashRouter as Router, Route, Link from react-router-dom
-    [X] create variable to capture input value
-    [X] dispatch feedback.understanding to store
-    [X] wrap "next" button in Router-Route-Link to '/support' page
-
-    Support
-    [X] import useDispatch, useSelector from react-redux
-    [X] import HashRouter as Router, Route, Link from react-router-dom
-    [X] create variable to capture input value
-    [X] dispatch feedback.support to store
-    [X] wrap "next" button in Router-Route-Link to '/review' page
-
-    Review Feedback
-    [X] import useDispatch, useSelector from react-redux
-    [X] import HashRouter as Router, Route, Link from react-router-dom
-    [X] get feedback object from Redux store with useSelector
-    [X] map feedback object to display feedback values and comments
-    [X] POST route to post feedback object to database table
-    [X] wrap "submit" button in Router-Route-Link to '/success' page 
-        [ ] upon successful feedback submission?
-
-    Success
-    [X] onClick function for Leave New Feedback button to:
-        [X] clear Redux fields 
-            [X] dispatch "CLEAR_INPUT" to store
-            [X] function in store to return feedback object state as empty object
-        [X] navigate to '/' home page (feelings) (need to wrap with Link)
-
-    LEFT:
-       X I need to figure out how to render feedback components on the Review page; and how to make one object out of the different components to post to the database. => ended up just storing everything in one feedback object.
-
-       X Also need to check that my resetFeedback function and Success component actually work
+## Usage
+This web app is designed as a survey to collect data from students about how understanding, sense of support, feelings, and any comments.
+1. Use the dropdown menu to give a rating between 1 and 5 on feelings, understanding, and support; click the `NEXT` button to navigate to the next page.
+2. Add any comments you'd like in the input field on the comments page.
+3. Before you submit your feedback, you'll be able to view a summary and confirm that they are correct or go back and edit if there's anything you want to change.
+4. Click the `submit` button and you're all set!
+5. If you'd like to submit more feedback, click the `Leave new feedback` button and have at it. 
